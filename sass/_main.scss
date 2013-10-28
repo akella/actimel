@@ -15,7 +15,8 @@
 		height: 259px;
 	}
 	.out_home & {
-		left: -119px;
+		left: -120px;
+		top: 1px;
 	}
 }
 
@@ -77,6 +78,8 @@
 .logo {
 	float: right;
 	width: 97px;
+	margin-top: -3px;
+	margin-right: 6px;
 	img {
 		display: block;
 		width: 100%;
@@ -88,40 +91,99 @@
 }
 
 .main-menu {
-	padding-left: 210px;
+	padding-left: 212px;
 	float: left;
-	width: 620px;
+	width: 610px;
 	.main-menu__list {
 		float: left;
 		list-style: none;
 		padding-top: 10px;
 		.main-menu__list__item {
 			float: left;
-			margin-left: 50px;
+			margin-left: 44px;
 			position: relative;
 			>a {
 				font-family: $myriadBold;
-				text-transform: uppercase;
-				color: #fff;
-				font-size: 19px;
-				line-height: 23px;
-				@include text-shadow(rgba(#740258, 1) 1px 1px 2px);
+				// text-transform: uppercase;
+				// color: #fff;
+				// font-size: 19px;
+				// line-height: 23px;
+				// @include text-shadow(rgba(#740258, 1) 1px 1px 2px);
+				@include hide-text;
 				position: relative;
 				text-align: center;
 				display: inline-block;
-				padding: 0 1px;
 				z-index: 10;
-				i {
-					@include bg-indent;
-					position: absolute;
-					bottom: -5px;
-					z-index: -1;
-					left: 0;
-					height: 9px;
-					width: 100%;
-					background: url(../img/bot-border2.png) repeat-x 0 0 transparent;
+				// i {
+				// 	@include bg-indent;
+				// 	position: absolute;
+				// 	bottom: -5px;
+				// 	z-index: -1;
+				// 	left: 0;
+				// 	height: 9px;
+				// 	width: 100%;
+				// 	background: url(../img/bot-border2.png) repeat-x 0 0 transparent;
+				// }
+			}
+			&.main-menu__list__item_immune{
+				>a {
+					@include sized-sprite($icons, nav-1);
 				}
-
+				&:hover
+					>a {
+						@include sized-sprite($icons, nav-1-hover);
+					}
+			}
+			&.main-menu__list__item_actimel{
+				>a {
+					@include sized-sprite($icons, nav-2);
+				}
+				&:hover
+					>a {
+						@include sized-sprite($icons, nav-2-hover);
+					}
+			}
+			&.main-menu__list__item_tastes{
+				>a {
+					@include sized-sprite($icons, nav-3);
+				}
+				&:hover
+					>a {
+						@include sized-sprite($icons, nav-3-hover);
+					}
+			}
+			&.main-menu__list__item_actions{
+				>a {
+					@include sized-sprite($icons, nav-4);
+				}
+				&:hover
+					>a {
+						@include sized-sprite($icons, nav-4-hover);
+					}
+			}
+			&.main-menu__list__item_games{
+				>a {
+					@include sized-sprite($icons, nav-5);
+				}
+				&:hover
+					>a {
+						@include sized-sprite($icons, nav-5-hover);
+					}
+			}
+			&.main-menu__list__item_events{
+				>a {
+					@include sized-sprite($icons, nav-6);
+				}
+				&:hover
+					>a {
+						@include sized-sprite($icons, nav-6-hover);
+					}
+				&.main-menu__list__item_events_mod{
+					&:hover
+					>a {
+						@include sized-sprite($icons, nav-6-hover-mod);
+					}
+				}
 			}
 			&:first-child {
 				margin-left: 0;
@@ -217,16 +279,16 @@
 				.submenu {
 					display: block;
 				}
-				a {
-					color: #B71F80;
-					@include text-shadow(none);
-					i {
-						display: none;
-					}
-					&:hover {
-						text-decoration: none;
-					}
-				}
+				// a {
+				// 	color: #B71F80;
+				// 	@include text-shadow(none);
+				// 	i {
+				// 		display: none;
+				// 	}
+				// 	&:hover {
+				// 		text-decoration: none;
+				// 	}
+				// }
 			}
 		}
 	}
@@ -443,7 +505,7 @@
 	line-height: 16px;
 	position: absolute;
 	bottom: -90px;
-	left: 88px;
+	left: 90px;
 	z-index: 99;
 	&:hover {
 		text-decoration: none;
@@ -456,7 +518,7 @@
 /*CAMPAIGNS*/
 .campaigns {
 	.campaigns__title {
-		padding: 0 55px 0 72px;
+		padding: 0 55px 0 90px;
 		position: relative;
 	}
 	.campaigns__title__text {
@@ -468,6 +530,7 @@
 			font-size: 40px;
 			line-height: 44px;
 			margin-bottom: 15px;
+			margin-left: -1px;
 			color: #000;
 		}
 		p {
@@ -593,6 +656,11 @@
 				.overlay {
 					background: url(../img/video-thumb-opac.png) repeat 0 0 transparent;
 				}
+				.text {
+					h3 {
+						text-decoration: underline;
+					}
+				}
 			}
 			&.watched {
 				.play-btn {
@@ -643,6 +711,11 @@
 					.overlay {
 						display: none;
 					}
+					.text {
+						h3 {
+							text-decoration: none;
+						}
+					}
 				}
 			}
 			&.coming-soon {
@@ -669,6 +742,11 @@
 					.overlay {
 						display: none;
 					}
+					.text {
+						h3 {
+							text-decoration: none;
+						}
+					}
 				}
 			}
 		}
@@ -691,7 +769,7 @@
 
 .steps {
 	width: 824px;
-	margin: 0 auto 42px;
+	margin: 0 auto 37px;
 	padding-bottom: 45px;
 	border-bottom: 7px solid #E319B6;
 	img {
@@ -726,8 +804,8 @@
 		height: 41px;
 		@include sized-sprite($icons, left-inactive41);
 		position: absolute;
-		left: 27px;
-		top: 78px;
+		left: 25px;
+		top: 82px;
 		&:hover {
 			@include sized-sprite($icons, left-active41);
 		}
@@ -738,8 +816,8 @@
 		height: 41px;
 		@include sized-sprite($icons, right-inactive41);
 		position: absolute;
-		right: 27px;
-		top: 78px;
+		right: 25px;
+		top: 82px;
 		&:hover {
 			@include sized-sprite($icons, right-active41);
 		}
@@ -759,13 +837,13 @@
 			padding: 0 16px;
 			img {
 				display: block;
-				margin-bottom: 14px;
+				margin-bottom: 12px;
 			}
 			.promo-title {
 				color: $pink;
 				font-size: 19px;
 				line-height: 22px;
-				padding-bottom: 10px;
+				padding-bottom: 4px;
 				display: inline-block;
 			}
 			.promo-text {
@@ -943,7 +1021,7 @@
   }
   .item{
     position: relative;
-    padding-top: 150px;
+    padding-top: 155px;
     height: 270px;
     padding-left: 90px;
     float:left;
@@ -1003,20 +1081,25 @@
   .text{
     width: 435px;
     color: #fff;
-    padding-bottom: 40px;
+    padding-bottom: 32px;
     position: relative;
     z-index: 10;
+    .text__type {
+    	position: absolute;
+    	top: -60px;
+    	font-size: 25px;
+    	font-weight: normal;
+    }
     h2{
       font-size: 25px;
       line-height: 29px;
       font-weight: normal;
-      padding-bottom: 5px;
     }
     h3{
       font-size: 40px;
       font-weight: bold;
       line-height: 42px;
-      padding-bottom: 20px;
+      padding-bottom: 11px;
     }
     &>p{
       font-size: 15px;
@@ -1035,6 +1118,7 @@
   .rating{
     position: relative;
     z-index: 10;
+    width: 390px;
     &>p{
       float:left;
       width: 230px;
@@ -1048,7 +1132,7 @@
       }
     }
     .share{
-      float:left;
+      float:right; 
       position: relative;
       top:8px;
     }
@@ -1056,12 +1140,12 @@
 }
 
 .breadcrumbs{
-  padding: 25px 90px;
+  padding: 25px 90px 28px;
   ul{
     li{
       list-style: none;
       float:left;
-      margin-left: 5px;
+      margin-left: 8px;
       &:first-child{
         margin-left: 0;
       }
@@ -1070,7 +1154,7 @@
       a{
         font-size: 13px;
         color: #6bb4ff;
-        margin-right: 5px;
+        margin-right: 9px;
         line-height: 15px;
         &:hover{
           text-decoration: underline;
@@ -1088,11 +1172,14 @@
       color: #292929;
       font-weight: normal;
       line-height: 27px;
-      padding-bottom: 35px;
+      padding-bottom: 36px;
+      margin-top: 20px;
     }
     &.new{
       h2{
         color: #e12d96;
+        padding-bottom: 36px;
+        margin-top: 0;
       }
     }
     .item{
@@ -1100,7 +1187,7 @@
       float:left;
       width: 150px;
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 17px;
       a{
         display: block;
         &:hover{
@@ -1116,7 +1203,7 @@
         display: block;
         position: absolute;
         text-align: center;
-        top:170px;
+        top:176px;
         left:0;
         width: 100%;
       }
@@ -1147,7 +1234,6 @@
 }
 
 .product-descr {
-  padding-bottom: 40px;
   .info {
     .title {
       h4 {
