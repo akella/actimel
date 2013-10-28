@@ -996,11 +996,12 @@
     overflow: hidden;
     @include sized-sprite($icons, btn-prev);
     position: absolute;
-    left:20px;
-    bottom:70px;
+    left:23px;
+    bottom:77px;
     z-index: 100;
     cursor:pointer;
     &:hover{
+      margin-left: -1px;
       @include sized-sprite($icons, btn-prev-hover);
     }
   }
@@ -1011,8 +1012,8 @@
     overflow: hidden;
     @include sized-sprite($icons, btn-next);
     position: absolute;
-    right:20px;
-    bottom:70px;
+    right:23px;
+    bottom:77px;
     z-index: 100;
     cursor:pointer;
     &:hover{
@@ -1156,8 +1157,9 @@
         color: #6bb4ff;
         margin-right: 9px;
         line-height: 15px;
+        text-decoration: underline;
         &:hover{
-          text-decoration: underline;
+          text-decoration: none;
         }
       }
     }
@@ -1224,17 +1226,24 @@
   .left {
     float: left;
     width: 360px;
-    padding-left: 100px;
-
+    padding-left: 91px;
+    padding-top: 35px;
+    .info{
+    	margin-bottom: 66px;
+    }
   }
   .right {
-    float: left;
-    padding-top: 40px;
+    position: absolute;
+    right: 0;
+    top: 85px;
   }
 }
 
 .product-descr {
   .info {
+    .post{
+    	margin-bottom: 9px;
+    }
     .title {
       h4 {
         color: #292929;
@@ -1242,7 +1251,7 @@
         font-weight: normal;
         font-size: 25px;
         line-height: 30px;
-        padding-bottom: 40px;
+        padding-bottom: 31px;
       }
     }
   }
@@ -1256,13 +1265,13 @@
       padding-bottom: 10px;
     }
     p {
-      padding-left: 10px;
+      padding-left: 9px;
       font-family: Arial, sans-serif;
       font-weight: normal;
       font-size: 13px;
-      line-height: 20px;
+      line-height: 19px;
       color: #676767;
-      padding-bottom: 25px;
+      padding-bottom: 20px;
     }
     h5 {
       color: #e12c95;
@@ -1270,14 +1279,15 @@
       font-weight: normal;
       font-size: 19px;
       line-height: 25px;
-      padding-bottom: 10px;
+      padding-bottom: 18px;
     }
-  }
-}
-
-.post_pl0 {
-  p {
-    padding-left: 0;
+    &.post_pl0 {
+      p {
+        padding-left: 0;
+        line-height: 1.4;
+        font-size: 11px;
+      }
+    }
   }
 }
 
@@ -1288,7 +1298,7 @@
     font-weight: normal;
     font-size: 19px;
     line-height: 25px;
-    padding-bottom: 10px;
+    padding-bottom: 9px;
   }
 }
 .nutrition-value__i {
@@ -1346,35 +1356,27 @@
   height: 220px;
   margin-bottom: 45px;
   position: relative;
+  .next, .prev {
+  	display: block;
+  	position: absolute;
+  	top: 50%;
+  	margin-top: -43px;
+  	cursor: pointer;
+  }
   .next {
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    background: url("../img/icons/prod-next.png") no-repeat;
-    position: absolute;
-    top: 50%;
-    margin-top:-35px;
-    right: 30px;
+    @include sized-sprite($icons, prod-next);
+    right: 20px;
     &:hover {
-      background: url("../img/icons/prod-next-act.png") no-repeat;
-      width: 50px;
-      height: 50px;
+      margin-right: 2px;
+      @include sized-sprite($icons, prod-next-act);
     }
   }
   .prev {
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    background: url("../img/icons/prod-prev.png") no-repeat;
-    position: absolute;
-    top: 50%;
-    margin-top:-35px;
-    left: 30px;
-    display: block;
+    @include sized-sprite($icons, prod-prev);
+    left: 20px;
     &:hover {
-      background: url("../img/icons/prod-prev-act.png") no-repeat;
-      width: 50px;
-      height: 50px;
+      margin-left: 2px;
+      @include sized-sprite($icons, prod-prev-act);
     }
   }
   .product-slider__i {
@@ -1404,7 +1406,7 @@
             font-size: 15px;
             line-height: 20px;
             text-align: center;
-            margin-top: -30px;
+            margin-top: -47px;
           }
         }
       }
