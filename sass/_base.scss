@@ -1,0 +1,21 @@
+// this one just agregates all the libs
+@import "compass/css3";
+@import "lib/mixins";
+@import "lib/animations";
+@import "lib/keyframes";
+
+// gradients for ie
+$experimental-support-for-svg: true;
+
+// global sprites
+$icons: sprite-map("icons/*.png", $spacing: 5px);
+$icons-retina: sprite-map("icons-retina/*.png", $spacing: 5px);
+
+/*VARIABLES*/
+$myriad:'MyriadPro-Regular',sans-serif;
+$myriadBold:'MyriadProBold',sans-serif;
+$eskiz:'eskizoneboldcbold',sans-serif;
+$myriadSemiBold: 'MyriadProSemiboldSemiExtended',sans-serif;
+$layoutW:932px;
+$layoutWide:1005px;
+$pink:#e020b7;

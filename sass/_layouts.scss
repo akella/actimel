@@ -1,0 +1,146 @@
+@import "base";
+
+/*STICKY FOOTER*/
+html, body {
+	height: 100%;
+}
+
+.out {
+	min-width: $layoutWide;
+	/*STICKY FOOTER*/
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -133px;
+	background: url(../img/pink-bg-rep.jpg) repeat 0 0 transparent;
+	position: relative;
+	z-index: 9;
+	overflow: hidden;
+	.push {
+		height: 133px;
+	}
+}
+
+.top-shadow {
+	@include bg-indent();
+	width: 1360px;
+	height: 103px;
+	background: url(../img/top-pink-shadow.jpg) repeat 0 0 transparent;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -680px;
+	z-index: 9;
+}
+
+.left-pattern {
+	@include bg-indent();
+	width: 1000px;
+	height: 672px;
+	background: url(../img/bg-pattern-left.png) repeat 0 0 transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9;
+}
+
+.right-pattern {
+	@include bg-indent();
+	width: 420px;
+	height: 672px;
+	background: url(../img/bg-pattern-right.png) repeat 0 0 transparent;
+	position: absolute;
+	right: 0;
+	z-index: 9;
+	top: 0;
+}
+
+.wrap {
+	width: $layoutW;
+	margin: 0 auto;
+	position: relative;
+}
+
+header {
+	position: relative;
+	z-index: 11;
+	min-width: $layoutW;
+	background: url(../img/header-bg.png) no-repeat 50% -13px transparent;
+	margin-bottom: 3px;
+}
+
+.content {
+	position: relative;
+	z-index: 10;
+	margin: 0 auto 15px;
+	width: $layoutW;
+	background-color: #fff;
+	height: 100%;
+	.content_i {
+		position: relative;
+		z-index: 10;
+		background-color: #fff;
+	}
+	&.content_w-pattern {
+		.content_i {
+			padding-bottom: 60px;
+			background: url(../img/bottom-pattern.jpg) no-repeat 0 100% #fff;
+		}
+	}
+	.bottom-shadow {
+		@include bg-indent;
+		position: absolute;
+		width: $layoutWide;
+		height: 75px;
+		bottom: -75px;
+		left: -34px;
+		z-index: -2;
+		background: url(../img/content-bot-shad.png) no-repeat 0 0 transparent;
+
+	}
+
+	.left-shadow {
+		display: block;
+		position: absolute;
+		background: url(../img/content-left-shad.png) repeat-y 0 0 transparent;
+		width: 16px;
+		height: 100%;
+		top: 0;
+		left: -16px;
+		min-height: 100%;
+	}
+	.right-shadow {
+		display: block;
+		position: absolute;
+		background: url(../img/content-right-shad.png) repeat-y 0 0 transparent;
+		width: 16px;
+		height: 100%;
+		top: 0;
+		right: -16px;
+		min-height: 100%;
+	}
+}
+
+footer {
+	position: relative;
+	z-index: 10;
+	background-color: #fff;
+	min-width: $layoutWide;
+	height: 65px;
+	padding-top: 68px;
+	overflow: hidden;
+	.top-bg {
+		@include bg-indent();
+		width: 100%;
+		height: 68px;
+		background: url(../img/pink-bg-bottom1.jpg) repeat 50% 0 transparent;
+		position: absolute;
+		left: 0;
+		z-index: 9;
+		top: 0;
+	}
+	.wrap {
+		width: 910px;
+		padding-left: 20px;
+	}
+}

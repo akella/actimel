@@ -1,0 +1,45 @@
+.popup_holder {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  background-color: rgba(163, 29, 123, 0.85);
+}
+.popup {
+  position: fixed;
+  z-index: 201;
+  top: 50%;
+  left: 50%;
+  display: none;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+}
+.popup .clsbtn {
+  display: block;
+  position: absolute;
+  text-indent: -10000 -10000;
+  font-size: 0px;
+  width: 18px;
+  height: 16px;
+  background: url("../img/popup_cls_btn.png");
+  top: -19px;
+  right: -23px;
+  z-index: 202;
+  cursor: pointer;
+}
+.game1 {
+  width: 820px;
+  height: 620px;
+  margin-left: -410px;
+  margin-top: -310px;
+}
+.game1 #game1 {
+  position: absolute;
+  top: -20px;
+  left: -1px;
+}
