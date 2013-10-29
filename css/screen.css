@@ -249,7 +249,7 @@ footer .wrap { width: 910px; padding-left: 20px; }
 .promo-archive__slider ul li .promo-text { color: #676767; font-size: 13px; line-height: 16px; display: inline-block; }
 
 /*GAMES*/
-.games .scroll-pic { width: 120px; height: 73px; position: absolute; top: 26px; right: 26px; z-index: 99; background: url(../img/scroll.png) no-repeat 0 0 transparent; }
+.games .scroll-pic { width: 120px; height: 73px; position: absolute; top: 26px; right: 26px; z-index: 99; background: url(../img/scroll.png) no-repeat 0 0 transparent; cursor: pointer; }
 .games .games__item { height: 200px; position: relative; padding: 40px 34px 0 92px; }
 .games .games__item img { display: block; position: absolute; width: 100%; z-index: 9; top: 0; left: 0; }
 .games .games__item .games__item__info { position: relative; z-index: 10; height: 100%; width: auto; }

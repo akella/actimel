@@ -1,5 +1,12 @@
 jQuery(function ($) {
 
+    // $('.js-scroll-pic').animate({scrollTop:$('scroll-to').position().top}, 'slow');
+    $(".js-scroll-pic").click(function (){
+            $('html, body').animate({
+                scrollTop: $("#scroll-to").offset().top
+            }, 500);
+    });
+
     $('.video-thumb').on("click", function () {
         var $this = $(this);
         var $thisIndex = $('.video__controls .video-thumb').index($this);
