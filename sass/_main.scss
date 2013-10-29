@@ -986,6 +986,88 @@
 	}
 }
 
+
+//btn
+.btn {
+	// // position: static;
+	// // width: 219px;
+	// // height: 97px;
+	// // @include sized-sprite($icons, play-big);
+	// // @include bg-indent;
+	// // width: 189px;
+	// // height: 83px;
+	// // @include sized-sprite($icons, play190);
+	// // position: absolute;
+	// // right: 33px;
+	// // bottom: 0;
+	// @include bg-indent;
+	// width: 189px;
+	// height: 83px;
+	// // @include sized-sprite($icons, play190);
+	// // position: absolute;
+	// // right: 33px;
+	// // bottom: 0;
+	
+	// position: static;
+	// width: 219px;
+	// height: 97px;
+	// @include sized-sprite($icons, play-big);
+
+	display: inline-block;
+	position: relative;
+	background-color: #b32892;
+	text-align: center;
+	width: 219px;
+	height: 72px;
+	color: #fff;
+	margin-bottom: 25px;
+	@include border-radius(12px);
+	@include box-sizing(border-box);
+	font-size: 34px;
+	padding: 23px 0;
+	letter-spacing: 0.1em;
+	// @include transition(all, .1s, linear);
+	@include text-shadow(0px -1px 0px rgba(#000, .8));
+	@include box-shadow(inset 0px -6px 0px rgba(#6d1157, 1));
+	// @include transform(translate3d(0,0,0));
+	&:active{
+		@include box-shadow(inset 0px -3px 0px rgba(#6d1157, 1));
+		margin-top: 3px;
+		height: 69px;
+	}
+	&:before{
+		position: absolute;
+		bottom: -20px;
+		left: 4px;
+		right: 4px;
+		z-index: -1;
+		height: 22px;
+		@include background-image(linear-gradient(rgba(#000, .1), rgba(#fff, .1)));
+		content: "";
+	}
+	&.btn_start{
+		float: left;
+		margin-top: 19px;
+		&:active{
+			margin-top: 22px;
+		}
+	}
+	&.btn_game{
+		position: absolute;
+		right: 33px;
+		bottom: 0;
+		width: 189px;
+		height: 62px;
+		@include border-radius(9px);
+		font-size: 30px;
+		padding: 19px 0;
+		&:active{
+			height: 59px;
+			margin-top: 3px;
+		}
+	}
+}
+
 /*PRODUCTS*/
 
 .product-descr{
